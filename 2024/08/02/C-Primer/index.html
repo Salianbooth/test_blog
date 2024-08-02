@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Alan Chen&#39;s blog">
 <meta property="og:description" content="C++ PrimerChapter 02      Variables and Basic TypesTable 2.1. C++: Arithmetic Types Signed and Unsigned Types Except for bool and the extended character types, the integral types may be signed or unsi">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202406221618696.png">
+<meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202408021209868.png">
 <meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202406262056997.png">
 <meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202406262101025.png">
 <meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202407081455638.png">
@@ -40,10 +40,10 @@
 <meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202407181848600.png">
 <meta property="og:image" content="https://gitee.com/salianbooth/picture/raw/master/202407181849206.png">
 <meta property="article:published_time" content="2024-08-02T04:06:42.000Z">
-<meta property="article:modified_time" content="2024-08-02T04:07:55.019Z">
+<meta property="article:modified_time" content="2024-08-02T04:09:50.945Z">
 <meta property="article:author" content="Salianbooth">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/salianbooth/picture/raw/master/202406221618696.png">
+<meta name="twitter:image" content="https://gitee.com/salianbooth/picture/raw/master/202408021209868.png">
   
     <link rel="alternate" href="/atom.xml" title="Alan Chen's blog" type="application/atom+xml">
   
@@ -213,7 +213,7 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h1 id="C-Primer"><a href="#C-Primer" class="headerlink" title="C++ Primer"></a>C++ Primer</h1><h1 id="Chapter-02-Variables-and-Basic-Types"><a href="#Chapter-02-Variables-and-Basic-Types" class="headerlink" title="Chapter 02      Variables and Basic Types"></a>Chapter 02      Variables and Basic Types</h1><h2 id="Table-2-1-C-Arithmetic-Types"><a href="#Table-2-1-C-Arithmetic-Types" class="headerlink" title="Table 2.1. C++: Arithmetic Types"></a>Table 2.1. C++: Arithmetic Types</h2><p><img src="https://gitee.com/salianbooth/picture/raw/master/202406221618696.png" alt="Clip_2024-06-22_16-18-35"></p>
+          <h1 id="C-Primer"><a href="#C-Primer" class="headerlink" title="C++ Primer"></a>C++ Primer</h1><h1 id="Chapter-02-Variables-and-Basic-Types"><a href="#Chapter-02-Variables-and-Basic-Types" class="headerlink" title="Chapter 02      Variables and Basic Types"></a>Chapter 02      Variables and Basic Types</h1><h2 id="Table-2-1-C-Arithmetic-Types"><a href="#Table-2-1-C-Arithmetic-Types" class="headerlink" title="Table 2.1. C++: Arithmetic Types"></a>Table 2.1. C++: Arithmetic Types</h2><p><img src="https://gitee.com/salianbooth/picture/raw/master/202408021209868.png" alt="Clip_2024-06-22_16-18-35"></p>
 <h4 id="Signed-and-Unsigned-Types"><a href="#Signed-and-Unsigned-Types" class="headerlink" title="Signed and Unsigned Types"></a>Signed and Unsigned Types</h4><ul>
 <li><strong>Except for bool and the extended character types, the integral types may be signed or unsigned. A signed type represents negative or positive numbers (including zero); an unsigned type represents only values greater than or equal to zero. The types int, short, long, and long long are all signed. We obtain the corresponding unsigned type by adding unsigned to the type, such as unsigned long. The type unsigned int may be abbreviated as unsigned.</strong></li>
 </ul>
@@ -952,6 +952,7 @@
 
 <h3 id="map-的下标访问"><a href="#map-的下标访问" class="headerlink" title="map 的下标访问"></a><code>map</code> 的下标访问</h3><p><code>map</code> 提供了下标操作符 <code>operator[]</code> 来访问和修改元素。如果键不存在，则插入一个新元素并初始化为默认值。</p>
 <h4 id="示例代码：-2"><a href="#示例代码：-2" class="headerlink" title="示例代码："></a>示例代码：</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>, <span class="type">int</span>&gt; word_count;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用下标访问元素</span></span><br><span class="line">    word_count[<span class="string">&quot;hello&quot;</span>] = <span class="number">1</span>;</span><br><span class="line">    word_count[<span class="string">&quot;world&quot;</span>] = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改元素</span></span><br><span class="line">    word_count[<span class="string">&quot;hello&quot;</span>]++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 访问元素</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;hello: &quot;</span> &lt;&lt; word_count[<span class="string">&quot;hello&quot;</span>] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;world: &quot;</span> &lt;&lt; word_count[<span class="string">&quot;world&quot;</span>] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果键不存在，插入新元素并初始化为默认值</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;cpp: &quot;</span> &lt;&lt; word_count[<span class="string">&quot;cpp&quot;</span>] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;  <span class="comment">// 输出0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         
       </div>
