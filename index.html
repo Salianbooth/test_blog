@@ -213,7 +213,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.7k words 
+            2.6k words 
           </div>
         </div>
         
@@ -224,16 +224,18 @@
         
           <div class="truncate-text">
             
-              
-本博客属个人所有，旨在整理和记录学习资料、心得体会，并方便日后查阅，不涉及任何商业目的。如文章不慎造成某方面侵权，实属抱歉，请联系我进行修改或删除。
-本博客是通过学习b站up主 - 爱编程的大丙 - 所录制的教学视频和其写的个人博客，所写成用于个人日后查阅的文章。
-爱编程的大丙 是一位非常优秀的老师，在之前就已经学习过其的cmake教学视频，讲解通俗易懂，能快速入门，在此对老师表示感谢。
-
-1.创建线程每一个线程都有一个唯一的线程ID，ID类型为pthread_t，这个ID是一个无符号长整形数，如果想要得到当前线程的线程ID，可以调用如下函数：
+              1.创建线程每一个线程都有一个唯一的线程ID，ID类型为pthread_t，这个ID是一个无符号长整形数，如果想要得到当前线程的线程ID，可以调用如下函数：
 1pthread_t pthread_self(void);	// 返回当前线程的线程ID
 
 在一个进程中调用线程创建函数，就可得到一个子线程，和进程不同，需要给每一个创建出的线程指定一个处理函数，否则这个线程无法工作。
-1234#include &lt;pthread.h&gt;int pthread_create(pthread_t *thread, const pthread_attr_t *attr,              ...
+1234#include &lt;pthread.h&gt;int pthread_create(pthread_t *thread, const pthread_attr_t *attr,                   void *(*start_routine) (void *), void *arg);// Compile and link with -pthread, 线程库的名字叫pthread, 全名: libpthread.so libptread.a
+
+
+参数:
+
+thread: 传出参数，是无符号长整形数，线程创建成功, 会将线程ID写入到这个指针指向的内存中
+
+attr: 线程的属...
             
           </div>
         
@@ -366,7 +368,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            43k words 
+            44k words 
           </div>
         </div>
         
